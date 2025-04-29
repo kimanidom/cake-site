@@ -14,7 +14,7 @@ function flipCard(card) {
     const message = document.getElementById("message").value;
   
     // Your WhatsApp phone number (with country code, no '+' sign)
-    const phoneNumber = '0711255905';
+    const phoneNumber = '+254711255905';
     
     // URL encode the message and name to make it compatible with WhatsApp
     const whatsappMessage = encodeURIComponent(`Name: ${name}\nMessage: ${message}`);
