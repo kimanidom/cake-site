@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: pink;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    margin: 30px 0 10px;
+    font-size: 2.8rem;
+    color: #fff;
+    animation: slideDown 1s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    animation: fadeIn 2s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .scene {
+    width: 260px;
+    height: 270px;
+    perspective: 1000px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+  }
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .card__face--front {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card__face--back {
+    background: white;
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card__face--back h2 {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .card__face--back p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 15px 0;
+    color: red;
+    font-weight: bold;
+    margin-top: auto;
+    animation: slideUp 1.5s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  p{
+    text-align: left;
+  }
+  h2{
+    color: blanchedalmond;
+  }
+  p{
+    color:whitesmoke;
+    text-align: left;
+  }
