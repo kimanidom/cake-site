@@ -78,7 +78,7 @@ body {
 
   .card__face--back {
     background: white;
-    color: #333;
+    color: black;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
